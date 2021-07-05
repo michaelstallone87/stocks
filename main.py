@@ -1,5 +1,4 @@
 # importar as bibliotecas necessárias
-import IPython
 import pandas as pd
 from pandas_datareader import data as web
 import plotly.graph_objects as go
