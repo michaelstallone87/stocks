@@ -6,11 +6,11 @@ import pandas as pd
 from os.path import expanduser
 import shutil
 
-
 home = expanduser("~")
 file = rf"{home}/Downloads/statusinvest-busca-avancada.csv"
 
-#Config DataFrame Procedure
+
+# Config DataFrame Procedure
 def DownloadDF(url, file):
     def_browser = random.randint(0, 1)
     if def_browser == 0:
@@ -40,14 +40,15 @@ def DownloadDF(url, file):
     except:
         driver.quit()
 
-#Download DataFrame FII:
+
+# Download DataFrame FII:
 fii = 'https://statusinvest.com.br/fundos-imobiliarios/busca-avancada'
 DownloadDF(fii, file)
 df = shutil.move(file, r"data/fii.csv")
 df_fii = pd.read_csv(df, sep=';', index_col=False)
 df_fii.set_index('TICKER').to_excel(f'{home}/Documents/FII.xlsx')
 
-#Download DataFrame Stocks:
+# Download DataFrame Stocks:
 stocks = 'https://statusinvest.com.br/acoes/busca-avancada'
 DownloadDF(stocks, file)
 df = shutil.move(file, r"data/stocks.csv")
