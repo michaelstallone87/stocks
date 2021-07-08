@@ -1,4 +1,5 @@
 import os
+import random
 import time
 from selenium import webdriver
 import pandas as pd
@@ -11,7 +12,11 @@ file = rf"{home}/Downloads/statusinvest-busca-avancada.csv"
 
 #Config DataFrame Procedure
 def DownloadDF(url, file):
-    driver = webdriver.Safari()
+    def_browser = random.randrange(0, 1, 1)
+    if def_browser == 0:
+        driver = webdriver.Safari()
+    if def_browser == 1:
+        driver = webdriver.Chrome('lib/chromedriver')
     driver.get(url)
     time.sleep(5)
     try:
