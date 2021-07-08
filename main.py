@@ -12,10 +12,12 @@ file = rf"{home}/Downloads/statusinvest-busca-avancada.csv"
 
 #Config DataFrame Procedure
 def DownloadDF(url, file):
-    def_browser = random.randrange(0, 1, 1)
+    def_browser = random.randint(0, 1)
     if def_browser == 0:
+        print('Safari')
         driver = webdriver.Safari()
     if def_browser == 1:
+        print('Chrome')
         driver = webdriver.Chrome('lib/chromedriver')
     driver.get(url)
     time.sleep(5)
