@@ -36,10 +36,12 @@ def DownloadDF(url, file):
 fii = 'https://statusinvest.com.br/fundos-imobiliarios/busca-avancada'
 DownloadDF(fii, file)
 df = shutil.move(file, r"data/fii.csv")
-df_fii = pd.read_csv(df, sep=';')
+df_fii = pd.read_csv(df, sep=';', index_col=False)
+df_fii.set_index('TICKER').to_excel(f'{home}/Documents/FII.xlsx')
 
 #Download DataFrame Stocks:
 stocks = 'https://statusinvest.com.br/acoes/busca-avancada'
 DownloadDF(stocks, file)
 df = shutil.move(file, r"data/stocks.csv")
-df_stocks = pd.read_csv(df, sep=';')
+df_stocks = pd.read_csv(df, sep=';', index_col=False)
+df_stocks.set_index('TICKER').to_excel(f'{home}/Documents/STOCKS.xlsx')
