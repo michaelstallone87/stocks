@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2356e9c9-f0ca-4daf-8c78-8bdd3e306a1a" name="Default Changelist" comment="Update">
-      <change beforePath="$PROJECT_DIR$/data/fii.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/fii.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stocks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stocks.csv" afterDir="false" />
-    </list>
+    <list default="true" id="2356e9c9-f0ca-4daf-8c78-8bdd3e306a1a" name="Default Changelist" comment="Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
