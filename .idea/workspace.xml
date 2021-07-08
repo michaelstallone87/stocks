@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2356e9c9-f0ca-4daf-8c78-8bdd3e306a1a" name="Default Changelist" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/fii.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/fii.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/stocks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stocks.csv" afterDir="false" />
     </list>
