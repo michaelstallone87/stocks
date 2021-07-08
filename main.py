@@ -11,15 +11,16 @@ file = rf"{home}/Downloads/statusinvest-busca-avancada.csv"
 
 #Config DataFrame Procedure
 def DownloadDF(url, file):
-    driver = webdriver.Chrome('lib/chromedriver')  # Optional argument, if not specified will search path.
-    driver.get(url);
-    time.sleep(5) # Let the user actually see something!
+    driver = webdriver.Safari()
+    driver.get(url)
+    time.sleep(5)
     try:
         publish_close = driver.find_element_by_class_name('btn-close')
         publish_close.click()
+        time.sleep(2)
         search_box = driver.find_element_by_xpath('//div/button[contains(@class,"find")]')
         search_box.click()
-        time.sleep(2) # Let the user actually see something!
+        time.sleep(2)
         download_button = driver.find_element_by_xpath('//div/a[contains(@class,"btn-download")]')
         time.sleep(2)
         if os.path.exists(file):
