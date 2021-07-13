@@ -19,20 +19,20 @@ def DownloadDF(url, file):
     if set_browser == 1:
         print('Safari')
         driver = webdriver.Safari()
-    driver.get(url);
+    driver.get(url)
     time.sleep(5)
     try:
         publish_close = driver.find_element_by_class_name('btn-close')
         publish_close.click()
         search_box = driver.find_element_by_xpath('//div/button[contains(@class,"find")]')
         search_box.click()
-        time.sleep(2) # Let the user actually see something!
+        time.sleep(2)
         download_button = driver.find_element_by_xpath('//div/a[contains(@class,"btn-download")]')
         time.sleep(2)
         if os.path.exists(file):
             os.remove(file)
         else:
-            print("The file does not exist")
+            print('O arquivo não existe')
         download_button.click()
         time.sleep(2)
         driver.quit()
